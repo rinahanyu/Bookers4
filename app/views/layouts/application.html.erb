@@ -10,6 +10,62 @@
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-nav">
+        <div class="navbar-brand">Bookers</div>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Books
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-share" aria-hidden="true"></span> logout
+              <% end %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> sign up
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_user_session_path do %>
+                <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span> login
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="container">
+      <%= yield %>
+      <div class="footer">
+        CopyRight Infratop.inc
+      </div>
+    </div>
   </body>
 </html>
