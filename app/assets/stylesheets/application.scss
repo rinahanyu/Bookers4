@@ -50,6 +50,25 @@
   font-style: bold;
 }
 
-.btn-success, .btn-info {
+.link .btn-success, .link .btn-info {
   color: gray;
+}
+
+.link {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+// エラーメッセージ 
+.error {
+  color: red;
+}
+
+#error_explanation {
+  color: red;
+}
+
+// Booksテーブル
+.table-hover th {
+  text-align: center;
 }
