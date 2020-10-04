@@ -1,31 +1,7 @@
 <%= flash[:notice] %>
 <div class="row">
-  <div class="col-xs-4">
-    <h1>User info</h1>
-      <p><%= attachment_image_tag @user, :profile_image, format:'jpeg', fallback: "no_image.jpg", size: "100x100" %></p>
-      <table class="table">
-        <tbody>
-          <tr>
-            <th>name</th>
-            <td><%= @user.name %></td>
-          </tr>
-          <tr>
-            <th>introduction</th>
-            <td><%= @user.introduction %></td>
-          </tr>
-        </tbody>
-      </table>
-      
-      <div class="row">
-        <%= link_to edit_user_path(@user) do %>
-          <button class="btn btn-default col-xs-12">
-            <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
-          </button>
-        <% end %>
-      </div>
-      
-    <h1>New book</h1>
-  </div>
+  
+<%= render 'users/list', user: @user %>
   
   <div class="col-xs-8">
     <h1>Books</h1>
