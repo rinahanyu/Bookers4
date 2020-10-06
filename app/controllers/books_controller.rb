@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :ensure_correct_user, {only: [:edit, :destroy]}
+  before_action :ensure_correct_user, {only: [:edit]}
   
   def create
     @books = Book.all
